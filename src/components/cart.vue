@@ -1,13 +1,26 @@
 <template>
   <div>
-    <div>Cart</div>
-    <div v-for="product in products" :key="product.id">
-      <span>Make: {{ product.make }}, </span>
-      <span>Model: {{ product.model }}, </span>
-      <span>Year: {{ product.year }}, </span>
-      <span>Color: {{ product.color }}, </span>
-      <span>Price: ${{ product.price }}, </span>
-    </div>
+    <h2>Cart</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Make</th>
+          <th>Model<th>
+          <th>Year</th>
+          <th>Color</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="product in products" :key="product.id">
+          <td>{{ product.make }}</td>
+          <td>{{ product.model }}</td>
+          <td>{{ product.year }}</td>
+          <td>{{ product.color }}</td>
+          <td>${{ product.price }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 

@@ -1,15 +1,10 @@
 <template>
   <div id="app">
     <Header />
-    <br>
     <Nav />
-    <br>
     <Products />
-    <br>
     <Cart />
-    <br>
     <PaymentForm />
-    <br>
     <Footer />
   </div>
 </template>
