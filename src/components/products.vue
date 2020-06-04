@@ -1,18 +1,24 @@
 <template>
-  <div>
-    <div>Prodcuts: Toy Cars</div>
-    <div v-for="product in products" :key="product.id">
-      <span>Make: {{ product.make }}, </span>
-      <span>Model: {{ product.model }}, </span>
-      <span>Year: {{ product.year }}, </span>
-      <span>Color: {{ product.color }}, </span>
-      <span>Price: ${{ product.price }}, </span>
-      <span>Posted: {{ product.posted }} </span>
-    </div>
-  </div>
+  <main>
+    <h1>Prodcuts: Toy Cars</h1>
+    <ul>
+      <li v-for="product in products" :key="product.id">
+        <dl>
+          <dt>Make:</dt> <dd>{{ product.make }}</dd>
+          <dt>Model:</dt> <dd>{{ product.model }}</dd>
+          <dt>Year:</dt> <dd>{{ product.year }}</dd>
+          <dt>Color:</dt> <dd>{{ product.color }}</dd>
+          <dt>Price:</dt> <dd>${{ product.price }}</dd>
+        </dl>
+      </li>
+    </ul>
+  </main>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+  dt, dd { display: inline-block; }
+  dd { margin: 0 2rem 0 0; }
+</style>
 
 <script>
   import json from '../assets/data/products.json'

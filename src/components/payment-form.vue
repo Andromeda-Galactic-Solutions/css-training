@@ -1,17 +1,32 @@
 <template>
-  <div>
-    <div>Payment Form</div>
-    <pre>
-      Need a form with the following fields:
-      - First Name, required, max length 100
-      - Last Name, required, max length 100
-      - Drop down, required, with the following options:
-        * Visa
-        * Mastercard
-        * American Express
-      - Card Number, required, max length 100
-    </pre>
-  </div>
+  <form>
+    <h2>Payment Information</h2>
+    
+    <label>
+      First Name
+      <input type="text" maxlength="100" required>
+    </label>
+
+    <label>
+      Last Name
+      <input type="text" maxlength="100" required>
+    </label>
+
+    <label>
+      Card Type
+      <select required>
+        <option value="visa">Visa</option>
+        <option value="mastercard">Mastercard</option>
+        <option value="americanExpress">American Express</option>
+      </select>
+    </label>
+
+    <label>
+      Card Number
+      <input type="number" maxlength="100" required>
+    </label>
+
+  </form>
 </template>
 
 <style scoped lang="scss"></style>

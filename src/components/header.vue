@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <img src="../assets/img/logo.png">
-    <div>CSS Training</div>
-  </div>
+  <header>
+    <img src="../assets/img/logo.png" alt=""> CSS Training
+  </header>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+  img { height: 2ex; }
+  header { margin-bottom: 1rem; }
+</style>
 
 <script>
 export default {

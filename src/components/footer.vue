@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <div>Footer</div>
+  <footer>
     <a href="">Accessibility Statement</a>
-  </div>
+  </footer>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+  footer {
+    margin-top: 1rem;
+  }
+</style>
 
 <script>
   export default {
