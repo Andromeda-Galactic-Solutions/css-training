@@ -5,8 +5,11 @@
 </template>
 
 <style scoped lang="scss">
+  @use '../assets/scss/mixins.scss' as *; 
   footer {
-    margin-top: 1rem;
+    bottom: 0;
+    border-top: solid 1px $border-color;
+    padding: 1ex 1ch;
   }
 </style>
 

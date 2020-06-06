@@ -1,0 +1,77 @@
+@use "./mixins.scss" as *;
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  --primary: #{$primary};
+  --primary-text: #{$primary-text};
+  --accent: #{$accent};
+  --links: #{$links};
+  --typography: Helvetica, Arial, sans-serif;
+  --primary-text: #{$primary-text};
+  --accent-text: #{$accent-text};
+  --headers: #{$headers};
+}
+.app.alternate {
+  --primary: #{$primary-alt};
+  --primary-text: #{$primary-text-alt};
+  --accent: #{$accent-alt};
+  --links: #{$links-alt};
+  --accent-text: #{$accent-text-alt};
+  --headers: #{$headers-alt};
+}
+
+.app {
+  font-family: var(--typography);
+  color: #{$primary-text};
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+  color: slategray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+a, a:link, a:visited {
+  color: var(--links);
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-text);
+  text-decoration: underline;
+}
+
+a:focus {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--primary-text);
+  border: none;
+  padding: $padding;
+  border-radius: $border-radius;
+  text-transform: uppercase;
+  font-size: .75rem;
+  &:hover, &focus {
+    background-color: var(--accent);
+    cursor: pointer;
+  }
+}
+
+.label {
+  font-size: smaller;
+  color: gray;
+  font-variant: small-caps;
+}

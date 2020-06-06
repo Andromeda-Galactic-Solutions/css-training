@@ -10,14 +10,48 @@
           <dt>Color:</dt> <dd>{{ product.color }}</dd>
           <dt>Price:</dt> <dd>${{ product.price }}</dd>
         </dl>
+        <button type="button">By Now</button>
       </li>
     </ul>
   </main>
 </template>
 
 <style scoped lang="scss">
-  dt, dd { display: inline-block; }
-  dd { margin: 0 2rem 0 0; }
+  @use '../assets/scss/theme.scss' as theme;
+  @use '../assets/scss/mixins.scss' as *;
+
+  ul { 
+    padding-left: 0; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  li {
+    flex-basis: 200px;
+    list-style-type: none; 
+    box-shadow: $box-shadow;
+    margin: 1rem;
+    padding: 0 10px;
+    background: white;
+  }
+  dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1ch;
+  }
+  dt {
+    grid-column: 1;
+    @extend .label;
+  }
+  dd {
+    grid-column: 2 / 5;
+  }
+  button {
+    display: block;
+    width: 75%;
+    margin: 2ex auto;
+    padding: 1.25ex 2ch;
+  }
 </style>
 
 <script>

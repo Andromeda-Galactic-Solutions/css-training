@@ -1,12 +1,16 @@
 <template>
-  <header>
+  <header class="title">
     <img src="../assets/img/logo.png" alt=""> CSS Training
   </header>
 </template>
 
 <style scoped lang="scss">
-  img { height: 2ex; }
-  header { margin-bottom: 1rem; }
+  img {
+    height: 3.5ex;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 1ch;
+  }
 </style>
 
 <script>
