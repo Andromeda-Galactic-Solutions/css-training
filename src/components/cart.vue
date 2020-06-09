@@ -7,7 +7,6 @@
       <span>Year: {{ product.year }}, </span>
       <span>Color: {{ product.color }}, </span>
       <span>Price: ${{ product.price }}, </span>
-      <span>Posted: {{ product.posted }} </span>
     </div>
   </div>
 </template>
