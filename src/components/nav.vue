@@ -1,8 +1,8 @@
 <template>
   <div>
-    <a href="">Home</a>
-    <a href="">My Account</a>
-    <a href="">Logout</a>
+    <div>Home</div>
+    <div>My Account</div>
+    <div>Logout</div>
   </div>
 </template>
 
