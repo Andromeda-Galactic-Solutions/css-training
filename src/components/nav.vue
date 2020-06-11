@@ -1,9 +1,14 @@
 <template>
-  <div>
-    <div>Home</div>
-    <div>My Account</div>
-    <div>Logout</div>
-  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="">Home</a>
+      </li>
+      <li>
+        <a href="">My Account</a></li>
+      <li><a href="">Logout</a></li>
+    </ul>
+  </nav>
 </template>
 
 <style scoped lang="scss"></style>

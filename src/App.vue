@@ -1,15 +1,12 @@
 <template>
   <div id="app">
     <Header />
-    <br>
     <Nav />
-    <br>
-    <Products />
-    <br>
-    <Cart />
-    <br>
-    <PaymentForm />
-    <br>
+    <Products /> <!-- main -->
+    <aside>
+      <Cart />
+      <PaymentForm />
+    </aside>
     <Footer />
   </div>
 </template>
