@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Prodcuts: Toy Cars</h1>
+    <h1>Products: Toy Cars</h1>
     <ul>
       <li v-for="product in products" :key="product.id">
         <dl>
