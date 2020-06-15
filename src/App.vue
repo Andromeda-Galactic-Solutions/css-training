@@ -11,7 +11,9 @@
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style lang="scss">
+  @import url(./assets/scss/theme.scss);
+</style>
 
 <script>
 import Header from './components/header.vue'
