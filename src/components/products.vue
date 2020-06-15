@@ -10,7 +10,7 @@
           <dt>Color:</dt> <dd>{{ product.color }}</dd>
           <dt>Price:</dt> <dd>${{ product.price }}</dd>
         </dl>
-        <button type="button">By Now</button>
+        <button type="button">Buy Now</button>
       </li>
     </ul>
   </main>

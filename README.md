@@ -5,6 +5,12 @@
 npm install
 ```
 
+### Branches
+
+* **master** - raw `html` to start with
+* **styled** - styled / completed training
+
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
