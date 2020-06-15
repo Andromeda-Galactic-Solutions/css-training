@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
+/* SMACSS BASE / ITCSS Generic */
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: rgba(0, 0, 0, .87);
   font-size: 16px;
+  margin: 0;
+  padding :0;
+}
+
+nav {
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,4 +38,15 @@ button:hover, button:focus {
   border-radius: 0;
   background-color: slateblue;
   cursor: pointer;
+}
+
+// OOCSS example from Cart.vue
+.row.light-blue.header > .cell {
+  color: slateblue;
+}
+.cell {
+  text-align: left;
+}
+.number {
+  text-align: right;
 }

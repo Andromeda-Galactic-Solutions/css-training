@@ -11,7 +11,21 @@
   </nav>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+// ITCSS Component & Layout
+nav {
+  width: 100%;
+  text-align: right;
+}
+nav li {
+  display: inline-block;
+  margin: 0.2rem 1rem;
+}
+// ITCSS Component & Skin/Theme
+nav {
+  background: #edecec;
+}
+</style>
 
 <script>
   export default { name: 'Nav' }

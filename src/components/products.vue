@@ -2,8 +2,8 @@
   <main>
     <h1>Products: Toy Cars</h1>
     <ul>
-      <li v-for="product in products" :key="product.id">
-        <dl>
+      <li class="l-grid card" v-for="product in products" :key="product.id">
+        <dl class="card-info">
           <dt>Make:</dt> <dd>{{ product.make }}</dd>
           <dt>Model:</dt> <dd>{{ product.model }}</dd>
           <dt>Year:</dt> <dd>{{ product.year }}</dd>
@@ -16,7 +16,23 @@
   </main>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+// LAYOUT
+.l-grid {
+  display: inline-block;
+  margin: 1rem;
+  width: 15rem;
+}
+
+// WIDGET / THEME
+.card {
+  background-color: #edecec;
+  text-align: right;
+}
+.card-info {
+  text-align: left;
+}
+</style>
 
 <script>
   import json from '../assets/data/products.json'
