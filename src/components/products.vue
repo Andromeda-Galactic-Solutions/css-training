@@ -3,6 +3,7 @@
     <h1>Products: Toy Cars</h1>
     <ul>
       <li v-for="product in products" :key="product.id">
+        <img src="../assets/img/toy-car.jpg" alt="toy car">
         <dl>
           <dt>Make:</dt> <dd>{{ product.make }}</dd>
           <dt>Model:</dt> <dd>{{ product.model }}</dd>
@@ -52,6 +53,12 @@
     margin: 2ex auto;
     padding: 1.25ex 2ch;
   }
+  img {
+    width:100%;
+    max-width: 640px;
+    height: auto;
+  }
+
 </style>
 
 <script>
