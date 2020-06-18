@@ -47,6 +47,9 @@ button:hover, button:focus {
 .cell {
   text-align: left;
 }
-.number {
-  text-align: right;
+
+@media (min-width: 600px) {
+  .number {
+    text-align: right;
+  }
 }
