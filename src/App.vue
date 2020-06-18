@@ -1,20 +1,55 @@
 <template>
   <div id="app">
-    <Header />
-    <br>
-    <Nav />
-    <br>
-    <Products />
-    <br>
-    <Cart />
-    <br>
-    <PaymentForm />
-    <br>
+    <div class="top-bar">
+      <Header />
+      <Nav />
+    </div>
+    <div class="content">
+      <Products />
+      <aside>
+        <Cart />
+        <PaymentForm />
+      </aside>
+    </div>
     <Footer />
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style lang="scss">
+@import './assets/scss/theme.scss';
+</style>
+
+<style scoped lang="scss">
+.top-bar {
+  padding: 1ex 2ch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.content {
+  background: #fafafa;
+  box-sizing: border-box;
+  padding: 0 2ch;
+  width: 100%;
+}
+
+@media(min-width: 600px) {
+  .content {
+    display: flex;
+  }
+  .content main {
+    flex-grow: 1;
+  }
+  .content aside {
+    width: 33%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #ffffff;
+  }
+}
+</style>
 
 <script>
 import Header from './components/header.vue'

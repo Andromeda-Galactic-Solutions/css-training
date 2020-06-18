@@ -1,11 +1,18 @@
 <template>
-  <div>
+  <header>
     <img src="../assets/img/logo.png">
-    <div>CSS Training</div>
-  </div>
+    CSS Training
+  </header>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+img {
+  height: 3.5ex;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 1ch;
+}
+</style>
 
 <script>
 export default {
