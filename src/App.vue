@@ -1,13 +1,13 @@
 <template>
   <div id="app" class="l-my-app">
-    <!-- <Header class="l-header" />
+    <Header class="l-header" />
     <Nav class="l-nav" />
     <Products class="l-products" />
     <aside class="l-aside">
-      <Cart /> -->
+      <Cart />
       <PaymentForm />
-    <!-- </aside>
-    <Footer class="l-footer" /> -->
+    </aside>
+    <Footer class="l-footer" />
   </div>
 </template>
 
@@ -34,17 +34,16 @@
 </style>
 
 <script>
-// import Header from './components/header.vue'
-// import Nav from './components/nav.vue'
-// import Products from './components/products.vue'
-// import Cart from './components/cart.vue'
+import Header from './components/header.vue'
+import Nav from './components/nav.vue'
+import Products from './components/products.vue'
+import Cart from './components/cart.vue'
 import PaymentForm from './components/payment-form.vue'
-// import Footer from './components/footer.vue'
+import Footer from './components/footer.vue'
 
 export default {
   name: 'App',
-  components: { PaymentForm }
+  components: { Header, Nav, Products, Cart, PaymentForm, Footer }
 }
 </script>
-  // components: { Header, Nav, Products, Cart, PaymentForm, Footer }
 
