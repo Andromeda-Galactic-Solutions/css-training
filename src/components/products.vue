@@ -3,14 +3,20 @@
     <h1>Products: Toy Cars</h1>
     <ul>
       <li v-for="product in products" :key="product.id">
-        <dl>
+        <h2 :id="'h2_'+product.id">{{product.year }} {{ product.make }} {{ product.model }}</h2>
+        <dl :id="'dl_'+product.id">
           <dt>Make:</dt> <dd>{{ product.make }} </dd>
           <dt>Model:</dt> <dd>{{ product.model }} </dd>
           <dt>Year:</dt> <dd>{{ product.year }} </dd>
           <dt>Color:</dt> <dd>{{ product.color }} </dd>
           <dt>Price:</dt> <dd>${{ product.price }} </dd>
         </dl>
-        <div>Buy Now</div>
+        <button 
+          type="button"
+          aria-controls="cart"
+          :aria-labelledby="'h2_'+product.id"
+          :aria-details="'dl_'+product.id"
+        >Buy Now</button>
       </li>
     </ul>
   </main>

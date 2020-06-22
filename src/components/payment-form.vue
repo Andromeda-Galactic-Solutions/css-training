@@ -13,12 +13,13 @@
       - Card Number, required, max length 100
       - Expiration date, required
     </pre> -->
-    <form>
+    <form v-on:submit="handleForm()">
       <div class="first-name">
         <label for="firstName">First Name</label>
           
           <input type="text"
             required
+            name="firstName"
             maxlength="100"
             id="firstName"
             aria-errormessage="firstNameError"
@@ -33,12 +34,12 @@
       <div class="last-name">
         <label>
           Last Name
-          <input type="text" required />
+          <input type="text" required name="lastName" />
         </label>
       </div>
       <div class="email">
         <label for="email">Email</label>
-        <input id="email" type="email" />
+        <input id="email" type="email" name="email" />
       </div>
       <!-- <div class="card-type">
         <label>Card Type</label>
@@ -52,25 +53,25 @@
       <div class="radio card-type">
         <fieldset>
           <legend>Please select a card type</legend>
-          <label><input name="card-type" type="radio">American Express</label>
-          <label><input name="card-type" type="radio">MasterCard</label>
-          <label><input name="card-type" type="radio">Visa</label>
+          <label><input name="card-type" value="amex" type="radio">American Express</label>
+          <label><input name="card-type" value="mc" type="radio">MasterCard</label>
+          <label><input name="card-type" value="visa" type="radio">Visa</label>
         </fieldset>
       </div>
       <div class="card-number">
         <label>
           Card Number
-          <input type="text" />
+          <input type="text" name="cardNumber" />
         </label>
       </div>
       <div class="expiration-date">
         <label>
-          Experition Date
-          <input type="month" />
+          Expiration Date
+          <input type="month" name="expirationDate" />
         </label>
       </div>
 
-      <button type="submit">Save me</button>
+      <button type="submit">Checkout</button>
     </form>
   </div>
 </template>
@@ -172,12 +173,18 @@ input:invalid ~ .error {
 <script>
   export default {
     name: "PaymentForm",
-    methods: { setInvalid }
+    methods: { setInvalid, handleForm }
   };
   function setInvalid(id) {
     const elem = document.getElementById(id)
     if (!elem) { return }
     const isValid = elem.validity.valid
     elem.setAttribute('aria-invalid', !isValid)
+  }
+
+  function handleForm() {
+    const form = document.forms[0]
+    console.log('form.submit', form)
+    // alert(form.firstName.value)
   }
 </script>

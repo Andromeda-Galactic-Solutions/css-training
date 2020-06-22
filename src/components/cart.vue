@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Cart</h2>
-    <ul>
+    <ul id="cart" role="status" aria-atomic="false" aria-live="polite" aria-relevant="additions removals">
       <li v-for="product in products" :key="product.id">
         <div>{{product.year}} {{product.make}} {{product.model}}</div>
         <div>${{product.price}}</div>
