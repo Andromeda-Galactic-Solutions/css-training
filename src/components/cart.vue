@@ -32,6 +32,7 @@
 </template>
 
 <style scoped lang="scss">
+@use '../assets/scss/theme';
 /** List Example **/
 ul {
   margin: 0;
@@ -39,10 +40,10 @@ ul {
 }
 li {
   list-style-type: none;
-  padding: 1ex 1ch;
+  padding: theme.$default-padding;
 }
 li:nth-of-type(even) {
-  background: rgba(1, 150, 123, 0.05);
+  background: theme.$stripes;
 }
 li :last-child {
   text-align: right;

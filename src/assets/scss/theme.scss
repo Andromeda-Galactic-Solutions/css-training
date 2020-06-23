@@ -1,5 +1,32 @@
+$primary: slateblue;
+$primary-dark: lightblue;
+$accent: gold;
+$accent-dark: magenta;
+
+$danger: red;
+$success: green;
+
+$default-padding: 2ex 2ch;
+$curvature: 4px;
+$stripes: rgba(1, 150, 123, 0.05);
+$borders: solid 1px gainsboro;
+
+:root {
+  --primary: #{$primary};
+  --accent: #{$accent};
+}
+
+.dark-theme {
+  --primary: #{$primary-dark};
+  --accent: #{$accent-dark};
+}
+
 body {
   padding: 0;
   margin: 0;
+  background: white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}

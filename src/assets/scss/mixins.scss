@@ -1,3 +1,25 @@
-@mixin test() {
-  background: yellow;
+@use './theme';
+
+@function drop-shadow($elevation) {
+  $x: $elevation * 2px;
+  $y: $elevation * 3px;
+  $blur: $elevation * 3px;
+  @return $x $y $blur gray;
 }
+
+.card-defaults {
+  padding: theme.$default-padding;
+  list-style-type: none;
+  border: theme.$borders;
+  border-radius: theme.$curvature;
+  margin: 1rem;
+  box-shadow: drop-shadow(2);
+}
+@mixin card ($color, $background: white) {
+  border: solid 1px $color;
+  dt {
+    color: $color;
+  }
+  @extend .card-defaults;
+}
+

@@ -16,7 +16,7 @@
 </template>
 
 <style lang="scss">
-@import './assets/scss/theme.scss';
+  @use './assets/scss/theme.scss';
 </style>
 
 <style scoped lang="scss">

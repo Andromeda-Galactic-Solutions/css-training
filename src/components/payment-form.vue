@@ -78,16 +78,8 @@
 
 <style scoped lang="scss">
 // theme
-$primary: #6a5acd;
-$primary-alt: #e6e2ff;
-
+@use '../assets/scss/theme' as t;
 /* CSS Output */
-section {
-  color: #6a5acd;
-  background: white;
-  border: solid 1px lightgray;
-  padding: 2ex 2ch;
-}
 
 .payment-form, textarea, input, datalist, select {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -96,27 +88,27 @@ section {
 input, select {
   outline: none;
   outline: rgba(1, 1, 1, 0);
-  border: solid 1px gainsboro;
+  border: t.$borders;
   border-radius: 2px;
   padding: 2ex 2ch;
 }
 input:hover, 
 select:hover {
-  border: dotted 1px darkslateblue;
+  border: dotted 1px t.$accent;
 }
 input:focus, 
 select:focus {
-  border: dashed 1px slateblue;
+  border: dashed 1px t.$primary;
 }
 input:invalid {
-  border-color: red;
+  border-color: t.$danger;
 }
 fieldset {
-  border-color: slateblue;
+  border-color: t.$primary;
   border-width: 1px;
 }
 .error {
-  color: red;
+  color: t.$danger;
 }
 .error:before {
   content: 'ERROR: ';
